@@ -5,7 +5,7 @@ voxelme
 `git clone https://github.com/taatuut/voxelme.git`
 
 ## Context
-Hugo Koopmans https://www.linkedin.com/posts/gregcocks_gis-spatial-mapping-activity-7295959387251060737-H8bd?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAA4JEABF_v0efkvHNqP4FjZ6u9WwQOTRVA
+Testing https://github.com/iosefa/PyForestScan after getting link to post https://www.linkedin.com/posts/gregcocks_gis-spatial-mapping-activity-7295959387251060737-H8bd from Hugo
 
 Developed on macOS.
 
@@ -49,16 +49,16 @@ python3 -m pip install pyforestscan
 
 ## Steps
 
-Download AHN5 data van [L1]
+Download AHN LAZ data van [L1]
 
 Test with example code from [L2]
 
 Run script `python3 ezlaz.py`
 
-Issues:
+### Issues
 - The output geotiff cannot be opened in macOS Preview, can *sometimes* with [L3] and *sometimes* see raster but *sometimes* problem and extents seem to small?
 - The script does visualize output with plot_metric, but this (matplotlib?) plot blocks script from further processing.
-
+- The process was automatically killed (because memory usage got too high with more than 120GB?) with message `zsh: killed     python3 ezlaz.py`. Could check if `codesign --sign - --force PATH_TO_YOUR_ISSUE_BINARY` solves this. For path check Python with `which python3`.
 ## Links
 
 [L1] https://www.ahn.nl/dataroom

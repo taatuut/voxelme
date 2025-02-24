@@ -20,7 +20,7 @@ epsgout = epsgin
 # NOTE: when using "EPSG:28992" as input epsg and "EPSG:3035" as output, the resulting tiff could not be opened
 # Test AHN laz data Cannenburgergat, Nijmegen, Imbosch
 lazzes = ["2023_C_27CZ2.LAZ", "2024_C_40CZ2.LAZ", "C_33DZ2.LAZ"]
-slicer = slice(1, 2) # slice(1, 2) # slice to process, e.g. slice(1, 2) is equivalent to [1:2] aka second item from the list
+slicer = slice(2, 3) # slice(1, 2) # slice to process, e.g. slice(1, 2) is equivalent to [1:2] aka second item from the list
 nowprint("settings pyforestscan")
 for laz in lazzes[slicer]:
     nowprint(f"laz: {inputdir}{laz}")

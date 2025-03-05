@@ -175,3 +175,4 @@ cython_debug/
 data/*.LAZ
 materials/*.pdf
 output/*.tiff
+temp.py

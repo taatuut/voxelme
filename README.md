@@ -58,7 +58,16 @@ Run script `python3 ezlaz.py`
 ### Issues
 - The output geotiff cannot be opened in macOS Preview, can *sometimes* with [L3] and *sometimes* see raster but *sometimes* problem and extents seem to small?
 - The script does visualize output with plot_metric, but this (matplotlib?) plot blocks script from further processing.
-- The process was automatically killed (because memory usage got too high with more than 120GB?) with message `zsh: killed     python3 ezlaz.py`. Could check if `codesign --sign - --force PATH_TO_YOUR_ISSUE_BINARY` solves this. For path check Python with `which python3`.
+- The process was automatically killed with message `zsh: killed     python3 ezlaz.py`, assume because memory usage got too high with more than 135GB. Running `codesign --sign - --force PATH_TO_YOUR_ISSUE_BINARY` is not the solution for this issue. Try in `bash` instead on `zsh`.
+
+## Useful commands
+
+`sudo find / -type f -name "*.mmap" 2>/dev/null` where `2>/dev/null` suppresses permission denied errors.
+
+`find /var/folders -type f -name "*.mmap" 2>/dev/null`
+
+`find /var/folders -type f -name "*.mmap" 2>/dev/null -delete`
+
 ## Links
 
 [L1] https://www.ahn.nl/dataroom
